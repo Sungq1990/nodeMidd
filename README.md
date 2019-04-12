@@ -53,35 +53,49 @@ Content-Type: application/json
 
 ```
 {
-  "service":"user-service",
-  "class":"getUserByCondition",
-  "package":"com.sungq1990.user.api.UserService",
-  "token":"c4ec4bfabe4d012603f826311a0cd0bb",
-  "params" : {
-    "key" : "id",
-    "value" : "100"
-  }
+    "service": "user-service",
+    "class": "getUserByToken",
+    "package": "com.sungq1990.user.api.UserService",
+    "token": "c4ec4bfabe4d012603f826311a0cd0bb",
+    "params" : {
+        "token": "testtesttest"
+    }
 }
 ```
 
 ###### 出参
 
+成功
+
 ```
 {
-  "result": {
-    "id": 100,
-    "nickName": "迟。",
-    "city": "Hangzhou",
-    "province": "Zhejiang",
-    "country": "China",
-    "updated_at": 1539946541,
-    "created_at": 1539946537
-  },
-  "status": {
-    "code": "00000",
-    "message": "success",
-    "reqId": "4b938f70-5cf7-11e9-ac81-57259642e1fa",
-    "runtime": "33"
-  }
+    "result": {
+        "id": 1,
+        "city": "杭州",
+        "province": "浙江",
+        "country": "中国",
+        "token": "testtesttest",
+        "updated_at": 1555071955,
+        "created_at": 1555071955
+    },
+    "status": {
+        "code": "00000",
+        "message": "success",
+        "reqId": "cf904a20-5d1f-11e9-9fd2-e3a24e467411",
+        "runtime": "5"
+    }
+}
+```
+
+失败
+```
+{
+    "result": {},
+    "status": {
+        "code": "10001",
+        "message": "参数为空",
+        "reqId": "bad855a0-5d1f-11e9-9fd2-e3a24e467411",
+        "runtime": "11"
+    }
 }
 ```
